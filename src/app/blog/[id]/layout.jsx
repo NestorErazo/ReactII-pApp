@@ -1,20 +1,12 @@
 import Image from "next/image"
 
-
-export default function Layout({ children, imageUrl }) {
-    return (
+export default function Layaout({children}){
+    return(
         <>
-            {imageUrl && (
-                <Image
-                    src={imageUrl}
-                    alt="Imagen del personaje"
-                    width={300}
-                    height={300}
-                />
-            )}
-            <main>
-                {children}
-            </main>     
+        <Image src="/img/imagen1.jpg"width={300} height={300} ></Image> 
+        <main>
+        {children}
+        </main>     
         </>
-    );
+    )
 }

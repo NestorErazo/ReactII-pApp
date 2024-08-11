@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,74 +16,18 @@
   }
 }
 
-/* styles.css */
-
-/* Estilo general */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
-/* Contenedor principal */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Estilo de la lista de tarjetas */
-.cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Estilo de cada tarjeta */
-.card {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Estilo de las imágenes */
-.card img {
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-}
-
-/* Estilo de los títulos */
-.card h3 {
-  font-size: 20px;
-  margin: 10px 0;
-  color: #333;
-}
-
-/* Estilo de los párrafos */
-.card p {
-  margin: 5px 0;
-  color: #666;
-}
-
-/* Estilo de los enlaces */
-.card a {
-  text-decoration: none;
-  color: #0070f3;
-}
-
-.card a:hover {
-  text-decoration: underline;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
